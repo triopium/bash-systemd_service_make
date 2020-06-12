@@ -1,0 +1,19 @@
+# IntelliJ project files
+.idea
+.idea/project-template.iml
+out
+gen
+pkg
+
+# dep
+/src/**/vendor/
+.netrc
+.netrc*
+
+# emacs, vim backup files
+\#*
+\.\#*
+*~
+*.swp
+
+

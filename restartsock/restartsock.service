@@ -1,0 +1,10 @@
+[Unit]
+Description=Restart smartscoket container if target memory is reached. Current version of smartsocket has memory leak.
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /usr/bin/restartsock.sh
+
+[Install]
+WantedBy=multi-user.target
+

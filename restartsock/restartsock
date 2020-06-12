@@ -1,0 +1,9 @@
+/var/log/restartsock.log {
+  rotate 5
+  dayly
+  size 10M
+  compress
+  missingok
+  notifempty
+}
+
