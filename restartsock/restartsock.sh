@@ -50,5 +50,6 @@ else
 		logMessage "$message" $LOGFILE
 	fi
 fi
+
 done
 

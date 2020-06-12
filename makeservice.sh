@@ -90,9 +90,14 @@ define fcont <<EOF
 #############
 # DESCRIPTION
 # $DESCRIPTION
+systemctl stop $SERVICE.servise
+systemctl disable $SERVICE.servise
+
 cp $SERVICE.service /etc/systemd/system/
 cp $SERVICE.sh /usr/bin
 cp $SERVICE /etc/logrotate.d/
+systemctl reload-or-restart $SERVICE.service
+systemctl enable $SERVICE.service
 EOF
 CreateFile ${SERVICE}_install.sh "$fcont"
 echo "Systemd service template created inside $PWD/. Don't forget edit files a then run install."
@@ -101,6 +106,9 @@ echo "Systemd service template created inside $PWD/. Don't forget edit files a t
 # MAKE UNINSTALL SCRIPT
 define fcont <<EOF
 #!/bin/bash
+systemctl stop $SERVICE.servise
+systemctl disable $SERVICE.servise
+
 rm -v /etc/systemd/system/$SERVICE.service 
 rm -v /usr/bin/$SERVICE.sh 
 rm -v /etc/logrotate.d/$SERVICE 
