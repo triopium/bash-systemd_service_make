@@ -21,7 +21,7 @@ containerGetMem(){
 
 # VARIABLE DEFINITIONS
 LOGFILE=/var/log/restartsock.log
-CONTAINER="nats"
+CONTAINER="r-KVv3-smart-socket"
 MEMTRESH="65.00%"
 CHECKPERIODE="5s"
 
