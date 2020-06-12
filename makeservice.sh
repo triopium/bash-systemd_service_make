@@ -87,6 +87,9 @@ echo "$fcont">>$SERVICE.sh
 # MAKE INSTALL SCRIPT
 define fcont <<EOF
 #!/bin/bash
+#############
+# DESCRIPTION
+# $DESCRIPTION
 cp $SERVICE.service /etc/systemd/system/
 cp $SERVICE.sh /usr/bin
 cp $SERVICE /etc/logrotate.d/
